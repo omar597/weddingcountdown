@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="520" viewBox="0 0 520 520">
+  <defs>
+    <!-- Clean watercolor feel WITHOUT grainy full-canvas noise -->
+    <radialGradient id="bluePetal" cx="40%" cy="35%" r="70%">
+      <stop offset="0" stop-color="#dff2ff" stop-opacity="0.95"/>
+      <stop offset="0.55" stop-color="#7fb6dc" stop-opacity="0.88"/>
+      <stop offset="1" stop-color="#3f7fa8" stop-opacity="0.0"/>
+    </radialGradient>
+    <radialGradient id="peachPetal" cx="35%" cy="35%" r="75%">
+      <stop offset="0" stop-color="#fff0eb" stop-opacity="0.95"/>
+      <stop offset="0.6" stop-color="#f0b2a8" stop-opacity="0.86"/>
+      <stop offset="1" stop-color="#c66f66" stop-opacity="0.0"/>
+    </radialGradient>
+    <radialGradient id="leaf" cx="35%" cy="30%" r="80%">
+      <stop offset="0" stop-color="#f2ffe4" stop-opacity="0.9"/>
+      <stop offset="0.55" stop-color="#b8d39a" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#6f8f4e" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- stems -->
+  <g opacity="0.28">
+    <path d="M40 510C85 420 130 360 210 300" fill="none" stroke="#7f8f6a" stroke-width="6" stroke-linecap="round"/>
+    <path d="M120 510C150 420 210 340 320 250" fill="none" stroke="#7f8f6a" stroke-width="5" stroke-linecap="round"/>
+  </g>
+
+  <!-- leaves -->
+  <g opacity="0.9">
+    <path d="M145 420c-34-34-38-86 20-104 60-19 92 52 52 90-23 22-48 28-72 14z" fill="url(#leaf)"/>
+    <path d="M228 360c-26-30-18-74 32-86 56-14 74 54 35 84-19 14-43 18-67 2z" fill="url(#leaf)"/>
+    <path d="M80 455c-24-22-26-58 14-72 46-16 63 36 36 60-14 12-30 16-50 12z" fill="url(#leaf)"/>
+  </g>
+
+  <!-- blue rose cluster -->
+  <g opacity="0.92">
+    <circle cx="120" cy="140" r="120" fill="url(#bluePetal)"/>
+    <circle cx="165" cy="165" r="95" fill="url(#bluePetal)" opacity="0.9"/>
+    <circle cx="95" cy="210" r="85" fill="url(#bluePetal)" opacity="0.85"/>
+    <circle cx="160" cy="110" r="70" fill="url(#bluePetal)" opacity="0.75"/>
+    <circle cx="130" cy="165" r="36" fill="#ffffff" opacity="0.32"/>
+  </g>
+
+  <!-- peach rose cluster -->
+  <g opacity="0.9">
+    <circle cx="360" cy="115" r="115" fill="url(#peachPetal)"/>
+    <circle cx="400" cy="155" r="92" fill="url(#peachPetal)" opacity="0.9"/>
+    <circle cx="325" cy="185" r="84" fill="url(#peachPetal)" opacity="0.86"/>
+    <circle cx="375" cy="95" r="70" fill="url(#peachPetal)" opacity="0.78"/>
+    <circle cx="365" cy="150" r="34" fill="#ffffff" opacity="0.28"/>
+  </g>
+
+  <!-- small filler blooms -->
+  <g opacity="0.65">
+    <circle cx="260" cy="90" r="38" fill="url(#peachPetal)" opacity="0.65"/>
+    <circle cx="250" cy="110" r="28" fill="url(#bluePetal)" opacity="0.6"/>
+    <circle cx="205" cy="210" r="30" fill="url(#peachPetal)" opacity="0.55"/>
+  </g>
+</svg>
+

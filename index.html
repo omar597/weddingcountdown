@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wedding Countdown • July 10, 2026 8:00 PM</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Great+Vibes&family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main class="stage" aria-live="polite">
+      <section class="invite">
+        <div class="bgWarning" id="bgWarning" hidden>
+          Background photo not found. Save it in <strong>assets/</strong> as
+          <strong>background.jpg</strong> (or <strong>.jpeg</strong>/<strong>.png</strong>/<strong>.webp</strong>),
+          or make your Drive file public (“Anyone with the link”).
+        </div>
+        <div class="debugPath" id="debugPath" hidden></div>
+        <p class="topline">WE REQUEST THE HONOR OF YOUR</p>
+        <p class="topline">PRESENCE AT OUR WEDDING</p>
+        <p class="topline">CELEBRATION</p>
+
+        <a class="envelopeLink" href="./details.html" aria-label="Open invitation">
+          <div class="envelopeWrap">
+            <div class="envelope" aria-hidden="true"></div>
+
+            <div class="diamond" aria-hidden="true">
+              <div class="diamondInner">
+                <div class="script">Coming</div>
+                <div class="script">soon</div>
+              </div>
+            </div>
+
+            <div class="seal" aria-hidden="true"></div>
+          </div>
+        </a>
+
+        <a class="moreInfo" id="more" href="#" onclick="return false;">CLICK FOR MORE INFORMATION</a>
+
+        <div class="countdown" id="timer" role="timer" aria-label="Countdown timer">
+          <div class="digits" aria-hidden="true">
+            <span class="digit" id="days2">--</span><span class="sep">:</span>
+            <span class="digit" id="hours2">--</span><span class="sep">:</span>
+            <span class="digit" id="mins2">--</span><span class="sep">:</span>
+            <span class="digit" id="secs2">--</span>
+          </div>
+          <div class="labels" aria-hidden="true">
+            <span>DAYS</span><span>HOURS</span><span>MINS</span><span>SECS</span>
+          </div>
+        </div>
+
+        <div class="done" id="done" hidden>
+          <p class="doneTitle">It’s time!</p>
+          <p class="doneSub">July 10, 2026 • 8:00 PM</p>
+        </div>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

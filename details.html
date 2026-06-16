@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Save the Date</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Great+Vibes&family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main class="stage" aria-live="polite">
+      <section class="invite details">
+        <div class="bgWarning" id="bgWarning" hidden>
+          Background photo not found. Save it in <strong>assets/</strong> as
+          <strong>background.jpg</strong> (or <strong>.jpeg</strong>/<strong>.png</strong>/<strong>.webp</strong>),
+          or make your Drive file public (“Anyone with the link”).
+        </div>
+        <div class="debugPath" id="debugPath" hidden></div>
+
+        <div class="detailsFrame">
+          <span class="floralCorner tl" aria-hidden="true"></span>
+          <span class="floralCorner tr" aria-hidden="true"></span>
+          <span class="floralCorner bl" aria-hidden="true"></span>
+          <span class="floralCorner br" aria-hidden="true"></span>
+
+          <p class="arabicTop reveal revealSlow" style="--d: 80ms" dir="rtl">
+            مِيَاهٌ كَثِيرَةٌ لَا تَسْتَطِيعُ أَنْ تُطْفِئَ الْمَحَبَّةَ، وَالسُّيُولُ لَا تَغْمُرُهَا
+          </p>
+
+          <div class="saveTheDate reveal" style="--d: 180ms">Save the Date</div>
+          <div class="weddingOf reveal" style="--d: 260ms">THE WEDDING OF</div>
+
+          <div class="initials reveal" style="--d: 340ms" aria-hidden="true">
+            <div class="big">O</div>
+            <div class="amp">&amp;</div>
+            <div class="big">C</div>
+          </div>
+
+          <p class="names reveal" style="--d: 440ms">OMAR SHAMMAS</p>
+          <div class="namesAnd reveal" style="--d: 500ms" aria-hidden="true"><span>&amp;</span></div>
+          <p class="names reveal" style="--d: 560ms">CHRISTIN YOUSSEF</p>
+
+          <div class="dateRow reveal" style="--d: 660ms">
+            <div class="dateBox">
+              <div class="weekday">FRIDAY</div>
+              <div class="day">10</div>
+              <div class="month">July 2026</div>
+            </div>
+            <div class="divider" aria-hidden="true"></div>
+            <div class="timeBox">
+              <div class="time">08.00 AM</div>
+              <span class="heart" aria-hidden="true">♥</span>
+              <div class="place" dir="rtl">
+                في كنيسة السيدة العذراء للسريان<br />
+                أرثوذكس في القامشلي
+              </div>
+            </div>
+          </div>
+
+          <p class="arabicBottom reveal" style="--d: 760ms" dir="rtl">الحفل بعد الكنيسة مباشرة في</p>
+          <p class="arabicBottom reveal" style="--d: 820ms" dir="rtl">مسبح تشيللو</p>
+
+          <p class="smallBottom reveal" style="--d: 900ms" dir="rtl">( ) عدد الاشخاص</p>
+        </div>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
