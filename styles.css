@@ -15,12 +15,17 @@ body{
   margin:0;
   color:var(--ink);
   background:
+    linear-gradient(180deg, #ffffffb0, #ffffff9a),
+    var(--bg-photo, url("./assets/background.jpg")),
     radial-gradient(1200px 900px at 50% 10%, #ffffffa8 0%, transparent 55%),
     linear-gradient(180deg, #efe8df, #f8f5f0);
+  background-size: cover, cover, auto, auto;
+  background-position: center, center, center, center;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
   font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
 }
 
-/* Background photo is now inside the invitation box (.invite) */
+/* Background photo is now on the whole page (body) */
 
 .stage{
   min-height:100%;
@@ -31,14 +36,7 @@ body{
 
 .invite{
   width:min(560px, 100%);
-  background:
-    /* fade overlay on top of photo */
-    linear-gradient(180deg, #ffffffb0, #ffffff9a),
-    /* photo (set by JS to Drive/local) */
-    var(--bg-photo, url("./assets/background.jpg"));
-  background-size: cover, cover;
-  background-position: center, center;
-  background-repeat:no-repeat, no-repeat;
+  background: linear-gradient(180deg, #ffffffd6, #ffffffc7);
   border-radius:18px;
   padding:26px 22px 22px;
   box-shadow: var(--shadow);
@@ -268,28 +266,19 @@ body.is-exiting .invite{
   border:1px solid #00000022;
 }
 
-.moreInfo{
-  display:block;
-  text-align:center;
-  margin:10px auto 16px;
-  font-family:"Cormorant Garamond", serif;
-  letter-spacing:.08em;
-  font-size:14px;
-  text-decoration: underline;
-  color:var(--ink);
-}
-.moreInfo:hover{ color:#4a342d; }
-
 .countdown{
-  margin-top:8px;
+  margin-top:14px;
   text-align:center;
+  display:grid;
+  justify-items:center;
 }
 .digits{
   font-family:"Cormorant Garamond", serif;
   font-variant-numeric: tabular-nums;
-  letter-spacing:.08em;
+  letter-spacing:.1em;
   color:var(--ink2);
   font-size:44px;
+  line-height:1;
 }
 .digit{ min-width:2ch; display:inline-block; }
 .sep{ opacity:.7; margin:0 .06em; }
@@ -298,8 +287,8 @@ body.is-exiting .invite{
   display:grid;
   grid-template-columns:repeat(4, 1fr);
   gap:10px;
-  margin:6px auto 0;
-  width:min(420px, 100%);
+  margin:8px auto 0;
+  width:min(440px, 100%);
   font-size:12px;
   letter-spacing:.16em;
   color: color-mix(in srgb, var(--ink2) 85%, #fff 15%);
@@ -345,7 +334,7 @@ body.is-exiting .invite{
   position:relative;
   border:1px solid color-mix(in srgb, var(--ink2) 40%, transparent);
   border-radius:18px;
-  padding:18px 16px 14px;
+  padding:18px 18px 16px;
   transform-origin: 50% 0%;
   animation: openLetter 820ms cubic-bezier(.2,.9,.2,1) both;
 }
@@ -390,25 +379,25 @@ body.is-exiting .invite{
 .floralCorner::before{ content:none; }
 
 .arabicTop{
-  margin:0 0 10px;
+  margin:0 0 12px;
   text-align:center;
   font-family: "Cormorant Garamond", serif;
   color:var(--ink);
-  font-size:18px;
+  font-size:19px;
   letter-spacing:.02em;
 }
 .saveTheDate{
   text-align:center;
-  margin:4px 0 0;
+  margin:2px 0 0;
   font-family:"Great Vibes", cursive;
-  font-size:44px;
+  font-size:46px;
   color:var(--ink2);
 }
 .weddingOf{
   text-align:center;
   margin:6px 0 0;
   font-family:"Cormorant Garamond", serif;
-  font-size:18px;
+  font-size:17px;
   letter-spacing:.14em;
   color:var(--ink);
   font-weight:600;
@@ -438,7 +427,7 @@ body.is-exiting .invite{
   font-family:"Cormorant Garamond", serif;
   color:var(--ink);
   margin:0;
-  font-size:22px;
+  font-size:23px;
   letter-spacing:.06em;
 }
 .namesAnd{
@@ -462,7 +451,7 @@ body.is-exiting .invite{
   color:var(--ink);
 }
 .dateRow{
-  margin:16px auto 0;
+  margin:18px auto 0;
   display:grid;
   grid-template-columns: 1fr auto 1fr;
   align-items:center;
@@ -507,14 +496,27 @@ body.is-exiting .invite{
   text-align:center;
   font-family:"Cormorant Garamond", serif;
   color:#4c1d16;
-  font-size:18px;
+  font-size:19px;
   font-weight:600;
 }
 .smallBottom{
   margin:10px 0 0;
   text-align:center;
-  font-size:14px;
+  font-size:15px;
   color:var(--ink2);
   font-family:"Cormorant Garamond", serif;
+}
+
+/* a little extra animation polish for details */
+@keyframes shimmerLine{
+  0%{ opacity:0; transform: scaleX(.6); }
+  60%{ opacity:1; transform: scaleX(1); }
+  100%{ opacity:1; transform: scaleX(1); }
+}
+.namesAnd.reveal::before,
+.namesAnd.reveal::after{
+  transform-origin: 50% 50%;
+  animation: shimmerLine 680ms ease both;
+  animation-delay: var(--d, 0ms);
 }
 
