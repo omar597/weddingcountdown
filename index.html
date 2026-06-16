@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Great+Vibes&family=Inter:wght@400;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Great+Vibes&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -27,16 +27,31 @@
 
         <a class="envelopeLink" href="./details.html" aria-label="Open invitation">
           <div class="envelopeWrap">
-            <div class="envelope" aria-hidden="true"></div>
-
-            <div class="diamond" aria-hidden="true">
-              <div class="diamondInner">
-                <div class="script">Coming</div>
-                <div class="script">soon</div>
+            <div class="envelope" aria-hidden="true">
+              <div class="env-back"></div>
+              <div class="env-paper">
+                <span class="envMonogram" aria-hidden="true">
+                  <span class="envInitial">O</span>
+                  <span class="envAmp">&amp;</span>
+                  <span class="envInitial">C</span>
+                </span>
               </div>
+              <div class="env-fold env-fold-left"></div>
+              <div class="env-fold env-fold-right"></div>
+              <div class="env-fold env-fold-bottom"></div>
+              <div class="env-flap"></div>
+              <div class="env-trim"></div>
             </div>
 
-            <div class="seal" aria-hidden="true"></div>
+            <div class="seal" aria-hidden="true">
+              <span class="sealMark">
+                <span class="sealInitial">O</span>
+                <span class="sealAmp">&amp;</span>
+                <span class="sealInitial">C</span>
+              </span>
+            </div>
+
+            <span class="envMoreInfo">CLICK FOR MORE INFORMATION</span>
           </div>
         </a>
 
@@ -59,6 +74,6 @@
       </section>
     </main>
 
-    <script src="./script.js"></script>
+    <script src="./script.js" defer></script>
   </body>
 </html>
