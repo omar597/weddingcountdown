@@ -2,6 +2,11 @@ const TARGET_LOCAL = new Date(2026, 6, 10, 20, 0, 0, 0); // Jul (0-based month),
 const BG_CACHE_KEY = "weddingcountdown-bg-url";
 const DRIVE_ID = "1ItVKd1BQPP7yt22cWJJQx5TrnxOByqjj";
 
+// Paste your exact Google Maps links here (leave empty to use search fallback).
+const MAP_LINKS = {
+  reception: "https://maps.app.goo.gl/UGHppSnTPkm7B4B98",
+};
+
 function pad2(n) {
   return String(n).padStart(2, "0");
 }
@@ -53,7 +58,6 @@ function showBgWarningIfMissing() {
     // ignore storage errors
   }
 
-  // Local first (fast), then one optimized Drive thumbnail.
   const candidates = [
     "./assets/background.jpg",
     "./assets/background.jpeg",
@@ -90,6 +94,19 @@ function showBgWarningIfMissing() {
   tryLoad(0);
 }
 
+function mapsUrl(customUrl, fallbackQuery) {
+  if (customUrl && customUrl.trim()) return customUrl.trim();
+  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(fallbackQuery)}`;
+}
+
+function wireLocationLinks() {
+  const reception = document.getElementById("receptionMap");
+
+  if (reception) {
+    reception.href = mapsUrl(MAP_LINKS.reception, "مسبح تشيللو القامشلي");
+  }
+}
+
 function updateCountdown() {
   const now = new Date();
   const diffMs = TARGET_LOCAL.getTime() - now.getTime();
@@ -124,5 +141,6 @@ function startCountdown() {
 }
 
 showBgWarningIfMissing();
+wireLocationLinks();
 wirePageTransitions();
 startCountdown();
